@@ -28,7 +28,7 @@ app.add_middleware(
 class Logindata(BaseModel):
     userName : str
     password : str
-@app.post("/")
+@app.post("/register")
 def login(user: Logindata):
     #  def insert(u_name,u_password):
     #       conn = connect()
