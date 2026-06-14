@@ -18,9 +18,13 @@ app = FastAPI()
 #      except Error as e:
 #           print("data base not connect", e)
 
+origins = [
+    "https://login-form-git-main-jitendra-das-projects.vercel.app"
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = ["https://login-form-theta-rust.vercel.app"],
+    allow_origins = origins,
     allow_credentials=True,
     allow_methods = ["*"],
     allow_headers = ["*"]
