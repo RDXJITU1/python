@@ -20,7 +20,7 @@ def connect():
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = ["*"],
+    allow_origins = ["https://login-form-theta-rust.vercel.app/"],
     allow_credentials=True,
     allow_methods = ["*"],
     allow_headers = ["*"]
