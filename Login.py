@@ -6,11 +6,11 @@ from mysql.connector import Error
 
 app = FastAPI()
 db_connect = {
-     "host":"thomas.proxy.rlwy.net",
-     "port": 11230,
-     "user":"root",
-     "password":"VaEgVIKalAwoCEIHqRyQhfYyjzHKimgf",
-     "database":"railway"
+    "host":"acela.proxy.rlwy.net",
+    "user":"root",
+    "password":"zovOSOfkrMiqSmbQJhzPMmRYOXdhRStU",
+    "port":"53912",
+    "database":"railway"
 }
 def connect():
      try:
@@ -19,13 +19,11 @@ def connect():
      except Error as e:
           print("data base not connect", e)
 
-origins = [
-    "https://login-form-git-main-jitendra-das-projects.vercel.app"
-]
+
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = origins,
+    allow_origins = ["*"],
     allow_credentials=True,
     allow_methods = ["*"],
     allow_headers = ["*"]
